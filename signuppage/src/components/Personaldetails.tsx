@@ -1,11 +1,77 @@
+import Select from "react-select";
+import { useState } from "react";
+import type { StylesConfig } from "react-select";
+
+const roleOptions = [
+    { value: "Actor", label: "Actor" },
+    { value: "Producer", label: "Producer" },
+    { value: "Director", label: "Director" },
+    { value: "Director of Audiography", label: "Director of Audiography" },
+    { value: "Sound Designer", label: "Sound Designer" },
+    { value: "Sound Mixer", label: "Sound Mixer" },
+    { value: "Music Director", label: "Music Director" },
+    { value: "Dubbing Director", label: "Dubbing Director" },
+    
+];
+const customStyles: StylesConfig<any, true> = {
+    control: (base, state) => ({
+        ...base,
+        backgroundColor: "#262626", // bg-neutral-800
+        borderColor: state.isFocused ? "#00FFA3" : "#737373", // focus border
+        boxShadow: state.isFocused ? "0 0 0 1px #00FFA3" : "none",
+        "&:hover": { borderColor: "#00FFA3" },
+        color: "white",
+        borderRadius: "0.5rem",
+        padding: "2px",
+    }),
+    menu: (base) => ({
+        ...base,
+        backgroundColor: "#171717", // darker dropdown background
+        color: "white",
+        borderRadius: "0.5rem",
+    }),
+    option: (base, { isFocused, isSelected }) => ({
+        ...base,
+        backgroundColor: isSelected
+            ? "#00FFA3"
+            : isFocused
+                ? "#262626"
+                : "transparent",
+        color: isSelected ? "#000000" : "#ffffff",
+        cursor: "pointer",
+    }),
+    multiValue: (base) => ({
+        ...base,
+        backgroundColor: "#00FFA3",
+        color: "#000",
+    }),
+    multiValueLabel: (base) => ({
+        ...base,
+        color: "#000",
+    }),
+    multiValueRemove: (base) => ({
+        ...base,
+        color: "#000",
+        ":hover": { backgroundColor: "#14b8a6", color: "#000" },
+    }),
+    placeholder: (base) => ({
+        ...base,
+        color: "#9CA3AF", // text-gray-400
+    }),
+    singleValue: (base) => ({
+        ...base,
+        color: "white",
+    }),
+};
 
 
 const Personaldetails = () => {
+    const [selectedRoles, setSelectedRoles] = useState([]);
     return (
         <>
             <div className="flex-1 p-10 text-white h-screen">
                 <div className="flex justify-between items-center mb-8">
-                    <h1 className="text-3xl font-semibold">Complete Your Profile</h1>                
+                    <h1 className="text-3xl font-semibold">Complete Your Profile</h1>
                 </div>
                 <div className="grid grid-cols-3 gap-20">
                     <div className="flex flex-col col-span-2 gap-2 ">
@@ -36,24 +102,14 @@ const Personaldetails = () => {
                                 </div>
                                 <div>
                                     <label className="block mb-2 text-m font-medium">Role</label>
-                                    <input
-                                        type="text"
+                                    <Select
+                                        isMulti
                                         name="role"
-                                        // value={formData.role}
-                                        // onChange={handleChange}
-                                        placeholder="e.g. Actor, Producer"
-                                        className="w-full rounded-lg bg-neutral-800 border border-neutral-500 px-4 py-2 focus:outline-none focus:border-[#00FFA3]"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block mb-2 text-m font-medium">Association</label>
-                                    <input
-                                        type="text"
-                                        name="association"
-                                        // value={formData.association}
-                                        // onChange={handleChange}
-                                        placeholder="Professional association or union"
-                                        className="w-full rounded-lg bg-neutral-800 border border-neutral-500 px-4 py-2 focus:outline-none focus:border-[#00FFA3]"
+                                        options={roleOptions}
+                                        value={selectedRoles}
+                                        onChange={setSelectedRoles}
+                                        placeholder="Select roles..."
+                                        styles={customStyles}
                                     />
                                 </div>
                             </div>
