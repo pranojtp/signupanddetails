@@ -11,7 +11,7 @@ const roleOptions = [
     { value: "Sound Mixer", label: "Sound Mixer" },
     { value: "Music Director", label: "Music Director" },
     { value: "Dubbing Director", label: "Dubbing Director" },
-    
+
 ];
 const customStyles: StylesConfig<any, true> = {
     control: (base, state) => ({
@@ -272,12 +272,28 @@ const Personaldetails = () => {
                                             <div className="w-full h-full bg-gray-500 rounded-full"></div>
                                         </div>
                                     </div>
+                                    <div className="flex gap-5 mt-8">
+                                    <button
+                                        // onClick={handleSave}
+                                        className="px-6 py-2 bg-neutral-800 text-[#00e695] font-Read w-35 border-1 border-[#00e695] rounded-lg hover:bg-[#00e695] hover:text-black transition"
+                                    >
+                                        Cancel
+                                    </button>
+                                    <a href="/addmembers">
+                                        <button
+                                            // onClick={handleSave}
+                                            className="px-6 py-2 bg-[#00FFA3] text-black font-Read w-35 rounded-lg hover:bg-[#00e695] transition"
+                                        >
+                                            Save
+                                        </button>
+                                    </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-end gap-5 mb-8">
+                {/* <div className="flex justify-end gap-5 mb-8">
                     <button
                         // onClick={handleSave}
                         className="px-6 py-2 bg-neutral-800 text-[#00e695] font-Read w-35 border-1 border-[#00e695] rounded-lg hover:bg-[#00e695] hover:text-black transition"
@@ -285,14 +301,14 @@ const Personaldetails = () => {
                         Cancel
                     </button>
                     <a href="/addmembers">
-                    <button
-                        // onClick={handleSave}
-                        className="px-6 py-2 bg-[#00FFA3] text-black font-Read w-35 rounded-lg hover:bg-[#00e695] transition"
-                    >
-                        Save
-                    </button>
+                        <button
+                            // onClick={handleSave}
+                            className="px-6 py-2 bg-[#00FFA3] text-black font-Read w-35 rounded-lg hover:bg-[#00e695] transition"
+                        >
+                            Save
+                        </button>
                     </a>
-                </div>
+                </div> */}
             </div>
         </>
     )
