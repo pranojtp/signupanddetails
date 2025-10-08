@@ -42,7 +42,7 @@ const customStyles: StylesConfig<any, true> = {
     }),
     multiValue: (base) => ({
         ...base,
-        backgroundColor: "#00FFA3",
+        backgroundColor: "white",
         color: "#000",
     }),
     multiValueLabel: (base) => ({
@@ -284,12 +284,14 @@ const Personaldetails = () => {
                     >
                         Cancel
                     </button>
+                    <a href="/addmembers">
                     <button
                         // onClick={handleSave}
                         className="px-6 py-2 bg-[#00FFA3] text-black font-Read w-35 rounded-lg hover:bg-[#00e695] transition"
                     >
                         Save
                     </button>
+                    </a>
                 </div>
             </div>
         </>

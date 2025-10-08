@@ -1,6 +1,7 @@
 import Signup from "./components/Signup"
 import Personaldetails from "./components/Personaldetails"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import AddTeamMembers from "./components/Addteammembers"
 function App() {
 
 
@@ -11,6 +12,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Signup />} />
             <Route path="/personaldetails" element={<Personaldetails />} />
+            <Route path="/addmembers" element={<AddTeamMembers />} />
           </Routes>
 
         </BrowserRouter>

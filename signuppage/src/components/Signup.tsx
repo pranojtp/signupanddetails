@@ -295,7 +295,7 @@ const Signup: React.FC = () => {
         >
           {/* Email */}
           <div className="w-80">
-            <label className="block text-gray-200 text-m font-medium">
+            <label className="block text-gray-200 text-m mb-2 font-medium">
               Email
             </label>
             <input
@@ -305,7 +305,7 @@ const Signup: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
               onBlur={handleBlur}
-              className={`w-full rounded-lg bg-neutral-800 text-white border px-4 py-2 placeholder-gray-400 focus:outline-none ${touched.email && errors.email
+              className={`w-full rounded-lg bg-neutral-800 text-white border px-4 py-2 placeholder-gray-400  focus:outline-none ${touched.email && errors.email
                 ? "border-red-500"
                 : "border-[#10a79d]"
                 }`}
@@ -329,13 +329,13 @@ const Signup: React.FC = () => {
               value={formData.pwd1}
               onChange={handleChange}
               onBlur={handleBlur}
-              className={`w-full rounded-lg bg-neutral-800 text-white border px-4 py-2 placeholder-gray-400 focus:outline-none ${touched.pwd1 && errors.pwd1
+              className={`w-full rounded-lg bg-neutral-800 text-white border px-4 py-2 placeholder-gray-400 placeholder:text-3xl focus:outline-none ${touched.pwd1 && errors.pwd1
                 ? "border-red-500"
                 : "border-[#10a79d]"
                 }`}
             />            
             <p
-              className={`text-sm mt-1 transition-all font-style: italic text-justify ${touched.pwd1 && errors.pwd1 ? "text-red-500" : "text-neutral-600"
+              className={`text-sm pt-3 mt-1 transition-all font-style: italic ${touched.pwd1 && errors.pwd1 ? "text-red-500" : "text-neutral-600"
                 }`}
             >
               Password must be at least 8 characters, include one uppercase letter, one
@@ -355,7 +355,7 @@ const Signup: React.FC = () => {
               value={formData.pwd2}
               onChange={handleChange}
               onBlur={handleBlur}
-              className={`w-full rounded-lg bg-neutral-800 text-white border px-4 py-2 placeholder-gray-400 focus:outline-none ${touched.pwd2 && errors.pwd2
+              className={`w-full rounded-lg bg-neutral-800 text-white border px-4 py-2 placeholder-gray-400 placeholder:text-3xl focus:outline-none ${touched.pwd2 && errors.pwd2
                 ? "border-red-500"
                 : "border-[#10a79d]"
                 }`}
