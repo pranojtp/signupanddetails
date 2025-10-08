@@ -69,7 +69,8 @@ const Personaldetails = () => {
     const [selectedRoles, setSelectedRoles] = useState([]);
     return (
         <>
-            <div className="flex-1 p-10 text-white h-screen">
+        <div className="h-screen pl-96 pt-5 bg-neutral-800">
+            <div className="bg-black flex-1 text-white h-fit w-fit border-1 border-neutral-700 rounded-xl p-3">
                 <div className="flex justify-between items-center mb-8">
                     <h1 className="text-3xl font-semibold">Complete Your Profile</h1>
                 </div>
@@ -273,20 +274,20 @@ const Personaldetails = () => {
                                         </div>
                                     </div>
                                     <div className="flex gap-5 mt-8">
-                                    <button
-                                        // onClick={handleSave}
-                                        className="px-6 py-2 bg-neutral-800 text-[#00e695] font-Read w-35 border-1 border-[#00e695] rounded-lg hover:bg-[#00e695] hover:text-black transition"
-                                    >
-                                        Cancel
-                                    </button>
-                                    <a href="/addmembers">
                                         <button
                                             // onClick={handleSave}
-                                            className="px-6 py-2 bg-[#00FFA3] text-black font-Read w-35 rounded-lg hover:bg-[#00e695] transition"
+                                            className="px-6 py-2 bg-neutral-800 text-[#00e695] font-Read w-35 border-1 border-[#00e695] rounded-lg hover:bg-[#00e695] hover:text-black transition"
                                         >
-                                            Save
+                                            Cancel
                                         </button>
-                                    </a>
+                                        <a href="/addmembers">
+                                            <button
+                                                // onClick={handleSave}
+                                                className="px-6 py-2 bg-[#00FFA3] text-black font-Read w-35 rounded-lg hover:bg-[#00e695] transition"
+                                            >
+                                                Save
+                                            </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -309,6 +310,7 @@ const Personaldetails = () => {
                         </button>
                     </a>
                 </div> */}
+            </div>
             </div>
         </>
     )

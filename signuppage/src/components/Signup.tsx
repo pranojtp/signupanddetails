@@ -283,7 +283,7 @@ const Signup: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-black">
+    <div className="flex items-center justify-center h-screen bg-neutral-800">
       <div className="bg-black border border-neutral-700 rounded-xl flex flex-col gap-8 p-8">
         <h1 className="text-white text-2xl font-semibold text-center">
           AUDIO REALITIES

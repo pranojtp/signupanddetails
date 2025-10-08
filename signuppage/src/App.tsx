@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <div className="flex items-center justify-center h-screen p-5">
+      {/* <div className="flex items-center justify-center h-screen p-5"> */}
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Signup />} />
@@ -16,7 +16,7 @@ function App() {
           </Routes>
 
         </BrowserRouter>
-      </div>
+      {/* </div> */}
 
     </>
   )
