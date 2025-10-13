@@ -216,7 +216,7 @@ const Signup: React.FC = () => {
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const passwordRegex =
-    /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#~()_|+=-`\/:;,.])[A-Za-z\d@$!%*?&#~()_|+=-`\/:;,.]{8,}$/;
 
   const validateField = (name: string, value: string) => {
     let error = "";
@@ -277,7 +277,7 @@ const Signup: React.FC = () => {
 
     if (Object.keys(newErrors).length === 0) {
       console.log("✅ Form submitted:", formData);
-      alert("Signup successful!");
+      // alert("Signup successful!");
       navigate("/personaldetails");
     }
   };
@@ -329,11 +329,11 @@ const Signup: React.FC = () => {
               value={formData.pwd1}
               onChange={handleChange}
               onBlur={handleBlur}
-              className={`w-full rounded-lg bg-neutral-800 text-white border px-4 py-2 placeholder-gray-400 placeholder:text-3xl focus:outline-none ${touched.pwd1 && errors.pwd1
+              className={`w-full rounded-lg bg-neutral-800 text-white border px-4 py-2 placeholder-gray-400 placeholder:text-4xl focus:outline-none ${touched.pwd1 && errors.pwd1
                 ? "border-red-500"
                 : "border-[#10a79d]"
                 }`}
-            />            
+            />
             <p
               className={`text-sm pt-3 mt-1 transition-all font-style: italic ${touched.pwd1 && errors.pwd1 ? "text-red-500" : "text-neutral-600"
                 }`}
@@ -355,7 +355,7 @@ const Signup: React.FC = () => {
               value={formData.pwd2}
               onChange={handleChange}
               onBlur={handleBlur}
-              className={`w-full rounded-lg bg-neutral-800 text-white border px-4 py-2 placeholder-gray-400 placeholder:text-3xl focus:outline-none ${touched.pwd2 && errors.pwd2
+              className={`w-full rounded-lg bg-neutral-800 text-white border px-4 py-2 placeholder-gray-400 placeholder:text-4xl focus:outline-none ${touched.pwd2 && errors.pwd2
                 ? "border-red-500"
                 : "border-[#10a79d]"
                 }`}
